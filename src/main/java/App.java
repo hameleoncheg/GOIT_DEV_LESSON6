@@ -1,7 +1,5 @@
-import dataDto.Client;
+
 import services.ClientService;
-import services.Database;
-import services.MigrationService;
 
 public class App {
     public static void main(String[] args) {

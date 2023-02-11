@@ -11,6 +11,7 @@ public class Database {
     String dbUser = "postgres";
     String dbPass = "postgres";
 
+
     private Database() {
         try {
             connection = DriverManager.getConnection(dbUrl, dbUser, dbPass);
