@@ -9,7 +9,7 @@ public class App {
         // System.out.println("clientService.getById(6) = " + clientService.getById(6));
         // clientService.setName(1,"Alex");
         // clientService.deleteById(7);
-        // System.out.println("clientService.listAll() = " + clientService.listAll());
+         System.out.println("clientService.listAll() = " + clientService.listAll());
 
     }
 }

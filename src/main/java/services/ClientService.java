@@ -75,9 +75,10 @@ public class ClientService {
 
     public List<Client> listAll() {
         List<Client> clientList = new ArrayList<>();
-        Database database = Database.getInstance();
-        try (Connection connection = database.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("SELECT *  FROM client");
+
+        try (PreparedStatement preparedStatement = Database.getInstance()
+                .getConnection()
+                .prepareStatement("SELECT *  FROM client");
              ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 clientList.add(new Client(resultSet.getLong("id"), resultSet.getString("name")));
